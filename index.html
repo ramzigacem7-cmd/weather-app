@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures page is mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Error popup (shown if city is not found) -->
+    <div class="comment-cloud">
+        <div class="comment">  
+            <!-- Error message will be inserted here dynamically by JS -->
+        </div>
+        <button type="button" class="comment-button">OK</button> <!-- Close popup button -->
+    </div>
+    
+    <!-- Main weather container -->
+    <div class="weather">
+
+        <!-- Section where weather details are displayed -->
+        <div class="weather-screen">
+            <!-- JS dynamically injects city name, temp, wind, etc. here -->
+        </div>
+
+        <!-- Loading animation (hidden until activated by JS) -->
+        <div class="loading"></div>
+    
+        <!-- Search form: input for city name + search button -->
+        <form class="search-city">
+            <input type="text" class="input1" placeholder="enter the city">
+            <button type="submit" class="button1">search</button>  
+        </form> 
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

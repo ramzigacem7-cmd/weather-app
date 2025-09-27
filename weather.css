@@ -1,0 +1,166 @@
+/* Make html and body take full height, remove default margin & padding */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* General body styling */
+body {
+  background-image: url(images/sky-1363333250XvV.jpg); /* Default background */
+  background-repeat: no-repeat;       /* No image repetition */
+  background-size: cover;             /* Cover entire screen */
+  background-position: center;        /* Center image */
+  background-attachment: fixed;       /* Fixed background when scrolling */
+  color: blue;                        /* Default text color */
+  display: flex;                      /* Center content with flexbox */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Error popup (comment cloud) */
+.comment-cloud {
+  box-shadow: 1px 1px 5px 3px black;  /* Drop shadow */
+  position: absolute;
+  left: 50%;                          /* Center horizontally */
+  top: 15%;                           /* Position near top */
+  transform: translate(-50%, -50%);   /* Precise centering */
+  width: 50%;
+  height: 15%;
+  border-radius: 12px;
+  display: none;                      /* Hidden by default */
+  flex-direction: column;             /* Arrange children vertically */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+
+/* Button inside error popup */
+.comment-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  height: 4vh;
+  border: none;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px 1px black;
+  background-color: blue;
+  color: white; 
+}
+
+/* Text inside error popup */
+.comment {
+  font-size: 20px;
+}
+
+/* Weather container */
+.weather {
+  width: 90%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% 30%;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px 3px black;
+}
+
+/* Bounce animation for loading */
+@keyframes bounse {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-150px); }
+  100% { transform: translateY(0); }
+}
+
+/* Loader visible with bounce animation */
+.loading.on {
+  visibility: visible;
+  animation: bounse 1s ease-in-out infinite;
+}
+
+/* Loader hidden by default */
+.loading {
+  position: absolute;
+  visibility: hidden;
+  left: 42%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: 12%;
+  height: 10vh;
+  background-color: yellow;
+  box-shadow: 1px 1px 30px 10px yellow;
+  border-radius: 50%; /* Circle shape */
+}
+
+/* Search form container */
+.search-city {
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 5px 3px black;
+}
+
+/* Weather display section */
+.weather-screen {
+  position: relative;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 15% 15% 15% 55%;
+}
+
+/* City name and country section */
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 36%;          /* Space between elements */
+  padding-right: 10px;
+}
+
+/* Temperature section */
+.temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Min & max temperature section */
+.min-max {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Other weather details (wind, humidity, etc.) */
+.others {
+  padding-left: 2%;
+}
+
+/* Input field for city */
+.input1 {
+  border-radius: 20px;
+  padding: 8px;
+  width: 80%;
+  font-size: 15px;
+  font-style: italic;
+  border: none;
+  box-shadow: 1px 1px 5px 3px black;
+}
+
+/* Search button */
+.button1 {
+  border-radius: 20px;
+  padding: 6px;
+  width: 20%;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  background-color: blue;
+  color: white;
+  box-shadow: 1px 1px 5px 3px black;
+}
